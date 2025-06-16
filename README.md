@@ -19,5 +19,4 @@ A space shooter game where you control a rocket, avoid asteroids, defeat UFOs, a
 
 ## Credits
 - Game by APPA
-- Assets used: [List your assets and their licenses]
-- Sound effects: [List your sound sources]
+- Assets used: See Citations.
