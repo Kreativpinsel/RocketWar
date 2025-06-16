@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="RocketWar - An exciting space shooter game">
+    <meta name="author" content="APPA">
+    <meta name="keywords" content="game, space shooter, HTML5, JavaScript">
+    <title>RocketWar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="gameOverlay" aria-live="polite" tabindex="0">
+        <div id="overlayContent"></div>
+        <div id="overlayButtons"></div>
+    </div>
+    <div id="mobileControlsLeft">
+        <button id="btnUp" aria-label="Move Up">▲</button>
+        <button id="btnDown" aria-label="Move Down">▼</button>
+    </div>
+    <div id="mobileControlsRightBottom">
+        <button id="btnShoot" aria-label="Shoot">SHOOT</button>
+        <button id="btnBoost" aria-label="Boost">BOOST</button>
+    </div>
+    <div id="mobileControlsRightTop">
+        <button id="btnPause" aria-label="Pause" onclick="togglePause()">⏸️</button>
+        <button id="btnMute" aria-label="Mute" onclick="toggleMute()">🔊</button>
+    </div>
+    <script src="game.js"></script>
+    <script src="upgradeMenu.js"></script>
+    <script>
+        // Show loading overlay immediately
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('overlayContent').innerHTML = '<h2>Loading...</h2>';
+            document.getElementById('overlayButtons').innerHTML = '';
+            document.getElementById('gameOverlay').style.display = 'flex';
+        });
+    </script>
+
+
+    <footer>
+        <p>&copy; 2023 Rocket War. By APPA.</p>
+    </footer>
+</body>
+
+</html>
